@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+    <head>        
+        <meta charset="utf-8">  
+        <title>templates</title>  
+        <link rel="stylesheet" href="style.css" />  
+    </head>    
+    <body>        
+   <?php  require  './partials/_header.phtml'; ?>
+   <?php  require  './partials/_footer.phtml'; ?>
+   <?php
+   if ($templates = "account")
+   {
+        require  './pages/account.php';
+   }
+   else if ($templates = "login")
+   {
+        require  './pages/login.php';
+   }
+   else if ($templates = "register")
+   {
+       require  './pages/register.php';
+   }
+   else if ($templates = "homepage")
+   {
+       require  './pages/homepage.php';
+   }
+   ?>
+    </body>
+</html>
+
+?>
